@@ -46,18 +46,33 @@
 	</section>
     <div class="main">
         <div class="row">
-            <li><img src="img/main1.png">
+            <li><img src="img/main1.png" onclick="slider('img/product1.png')">
             </li>
         </div>
         <div class="row row2">
-            <li><img src="img/main2.png">
+            <li><img src="img/main2.png" onclick="slider('img/product2.png')">
             </li>
         </div>
         <div class="row row3">
-            <li><img src="img/main3.png">
+            <li><img src="img/main3.png" onclick="slider('img/product3.png')">
             </li>
         </div>
     </div>
     <a href="#" class="bottom">Scroll Down<i class='bx bx-down-arrow-circle'></i></a>
+    <script type="text/javascript">
+        function slider(anything){
+            document.querySelector('.one').src=anything;
+       
+        };
+
+        let menu=document.querySelector('#menu-icon');
+        let navbar=document.querySelector('.navbar');
+
+        menu.onclick=()=>{
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+        }
+
+    </script>
 </body>
 </html>
